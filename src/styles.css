@@ -23,6 +23,6 @@
         @apply bg-white text-blue-950 rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
     } ;
     .btn-login {
-        @apply bg-cyan-500 text-white rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
+        @apply bg-sky-500 text-white rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
     }
 }
