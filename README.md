@@ -49,6 +49,9 @@ font-family = font + name `<p class="font-mono">Hello World</p>`
 
 font-size = text + size `<p class="text-xl">Hello World</p>`
 
+font-weight = font + size `<p class="font-medium">Hello World</p>`
+
+letter-spacing = tracking + size `<p class="tracking-wide">Hello World</p>`
 
 ## SOME BORDER PROPERTIES
 
