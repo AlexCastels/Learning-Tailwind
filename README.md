@@ -172,7 +172,7 @@ Devono essere specificate nel main.css e ce ne sono di 3 tipi
 
 Così facendo possiamo creare degli stili generici da utilizzare ovunque nel progetto
 
-Esempio : 
+Esempio: 
 
 ```
 @layer base {
