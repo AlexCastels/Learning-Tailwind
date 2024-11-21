@@ -41,6 +41,12 @@ tailwind.config = {
 
 ```
 
+## GRANDEZZE PERSONALIZZATE
+
+È possibile poter impostare una grandezza specifica nelle proprietà attraverso le `[]`
+
+`<p class="h-[50px] w-[100px] text-sky-500">Hello World</p>`
+
 ## SOME TEXT PROPERTIES
 
 color = text + color `<p class="text-red">Hello World</p>`
@@ -52,6 +58,12 @@ font-size = text + size `<p class="text-xl">Hello World</p>`
 font-weight = font + size `<p class="font-medium">Hello World</p>`
 
 letter-spacing = tracking + size `<p class="tracking-wide">Hello World</p>`
+
+## GESTIONE DEL TESTO
+
+La classe `whitespace-pre-line` permette di rispettare il ritorno a capo del testo 
+
+<p class="text-[clamp(1rem, 2.5vw, 2rem)]">
 
 ## SOME BORDER PROPERTIES
 
