@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {
+        fontFamily: {
+            grotesk : ['grotesk', 'sans-serif'],
+        },
         fontSize: {
             'tiny': '7px',
         },

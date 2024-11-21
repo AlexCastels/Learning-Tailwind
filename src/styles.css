@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,16 +8,16 @@
 @layer utilities {
     .rotate-180 {
         transform: rotateY(180deg);
-    }
+    } ;
     .preserve-3d {
         transform-style: preserve-3d;
-    }
+    } ;
     .perspective {
         perspective: 1000px;
-    }
+    } ;
     .backface-hidden {
         backface-visibility: hidden;
-    }
+    } ;
 }
 
 @layer components {
@@ -24,5 +26,12 @@
     } ;
     .btn-login {
         @apply bg-sky-500 text-white rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
-    }
+    } ;
+    .animated-card {
+        @apply  hover:animate-flip rounded object-fill delay-1000 drop-shadow-2xl h-40 w-40 sm:w-52 sm:h-52 sm:min-w-52 cursor-pointer
+    } ;
+    .card-container {
+        @apply flex items-center gap-4 text-sm sm:text-center sm:flex-col
+    /*    in @apply flex-col non viene preso chiedere mentre in linea si*/
+    } ;
 }
