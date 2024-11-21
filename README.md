@@ -95,6 +95,22 @@ tailwind.config = {
 </div>
 ```
 
+## SELETTORI
+
+Come in css possiamo utilizzare selettori, in maniera più semplificata
+
+All'interno di un container basterà solamente indicare `first:classe` o `last:classe` per puntare direttamente al child
+
+Oppure `odd:classe` ed `even:classe` per puntare ai child pari o dispari 
+
+```
+<ul class="flex flex-col item-center justify-around first:pt-0 last:pb-0">
+    <li class="text-sky-500">First</li>
+    <li class="text-sky-500">Second</li>
+    <li class="text-sky-500">Third</li>
+</ul>
+```
+
 ## PSEUDO CLASS
 
 Per utilizzare le pseudo classi basterà solamente aggiungere la pseudo classe con :
@@ -104,6 +120,29 @@ hover = `<div class="bg-blue hover:bg-bg-opacity-70"></div>`
 active = `<div class="bg-black active:bg-white"></div>`
 
 focus = `<div class="bg-black focus:ring-grey-300"></div>`
+
+### GROUP
+
+Tailwind mette a disposizione un utility per gestire il comportamento delle pseudoclassi
+
+È possibile utilizzare la classe `group` per gestire più pseudoclassi in un contenitore
+
+Ad esempio:
+
+```
+<div class="group p-4 border rounded-lg hover:bg-gray-100">
+  <h2 class="text-lg font-bold group-hover:text-blue-500">Titolo della card</h2>
+  <p class="text-gray-500 group-hover:text-gray-700">
+    Questo testo cambia colore quando passi il mouse sulla card.
+  </p>
+</div>
+```
+
+In questo caso il div padre contiene la classe `group`
+
+I child contengono la pseudo classe con il group, `group-hover:classe`
+
+Il tutto viene attivato quando il padre è in stato di hover, questo per sincronizzare i cambiamenti
 
 ## PADDING - MARGIN - BOX MODEL
 
@@ -121,9 +160,9 @@ padding orizzontale (asse x) : padding-left + padding-right = px + grandezza `<d
 
 padding verticale (asse y) : padding-top + padding-bottom = py + grandezza `<div class="py-4"></div>`
 
-Per il margin sono le stesse classi ma utilizzando `m`
+- Per il margin sono le stesse classi ma utilizzando `m`
 
-margin = m + grandezza `<div class="p-4"></div>`
+margin = m + grandezza `<div class="m-4"></div>`
 
 ## FLEX
 
