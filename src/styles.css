@@ -32,6 +32,5 @@
     } ;
     .card-container {
         @apply flex items-center gap-4 text-sm sm:text-center sm:flex-col
-    /*    in @apply flex-col non viene preso chiedere mentre in linea si*/
     } ;
 }
