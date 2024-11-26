@@ -23,5 +23,9 @@ export class ViewComponent {
         {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
         {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
         {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
+        {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
+        {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
+        {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
+        {message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus deleniti dolore exercitationem hic illum minus natus neque placeat, unde!'},
     ]
 }

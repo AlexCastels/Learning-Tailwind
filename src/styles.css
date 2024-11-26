@@ -31,6 +31,6 @@
         @apply  hover:animate-flip rounded object-fill delay-1000 drop-shadow-2xl h-40 w-40 sm:w-52 sm:h-52 sm:min-w-52 cursor-pointer
     } ;
     .card-container {
-        @apply flex items-center gap-4 text-sm sm:text-center sm:flex-col
+        @apply flex items-center gap-4 text-sm sm:text-center sm:flex-col sm:w-[300px]
     } ;
 }
