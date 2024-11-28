@@ -1,0 +1,27 @@
+<section class="grid gap-4 justify-items-center items-center sm:grid-cols-4 lg:grid-cols-8 grid-rows-8 text-white">
+    <h2 class="lg:col-start-3 lg:col-end-7 text-6xl font-medium tracking-widest">Contacts</h2>
+    <p class="lg:col-start-4 lg:col-end-6 font-medium tracking-widest">Grid Layout complete</p>
+    <div class="flex flex-col gap-2 overflow-y-scroll h-80 border-t-2 border-b-2 border-blue-50 pt-4 pb-4">
+<!--        <div class="h-[2px] w-full self-center bg-blue-50 "></div>-->
+        <div *ngFor="let contact of contacts , index as i">
+            <div [ngClass]="{'opacity-50' : i % 2 === 0 }" class="flex items-center text-sm lg:text-lg justify-between gap-2 p-1 ">
+                <div class="flex items-center gap-1  ">
+                    <i class="fa-solid fa-user bg-blue-500 p-4 rounded-full"></i>
+                    <p class="truncate">{{contact.name}}</p>
+                    <p class="truncate">{{contact.lastName}}</p>
+                </div>
+                <div class="flex items-center gap-2 ">
+                    <p>+39 {{contact.personalNumber}}</p>
+                </div>
+                <div class="flex gap-2 ">
+                    <i class="fa-solid fa-phone-volume bg-blue-500 p-3 rounded-xl "></i>
+                    <i class="fa-solid fa-message bg-blue-500 p-3 rounded-xl "></i>
+                </div>
+            </div>
+        </div>
+<!--        <div class="h-[2px] w-full self-center bg-blue-50"></div>-->
+    </div>
+    <div>
+        singoli contatti in card con translate
+    </div>
+</section>
