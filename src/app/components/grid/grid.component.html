@@ -2,7 +2,7 @@
     <h1 class="text-6xl font-medium tracking-widest text-white">Showcase</h1>
     <h5 class="font-medium tracking-widest text-white">Responsive with Grid</h5>
     <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-16 xl:gap-24">
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items.slice(0 , imagePerRow)">
             <div class="grid gap-1 grid-cols-3 grid-rows-3 w-[250px] h-[250px] rounded-3xl p-5 bg-gradient-to-tr from-teal-300 to-blue-800 shadow-xl">
                 <p class="row-start-4 col-start-1 col-end-3 text-xl font-medium tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-sky-700 to-blue-500">My product</p>
                 <div class="col-start-3">
@@ -12,14 +12,19 @@
             </div>
         </div>
     </div>
+    <button *ngIf="imagePerRow < items.length" (click)="next()" class="bg-blue-700 shadow-xl rounded-lg p-4 font-semibold tracking-widest hover:bg-sky-400 hover:text-white hover:scale-125 transition-all cursor-pointer">Load more</button>
+    <p *ngIf="imagePerRow >= items.length" class="text-xl font-semibold tracking-widest text-white">Nothing to see..</p>
     <div class="h-[2px] w-11/12 bg-gradient-to-r from-blue-800 via-sky-700 to-blue-500 rounded-xl"></div>
 </div>
 
 <!--
-    <p class="absolute bottom-5 left-5 text-xl font-medium tracking-widest text-white ">My product</p>
-    <div>
-        <i class="absolute top-6 right-6  fa-solid fa-motorcycle fa-4x" style="color: #1c407d;"></i>
-        <p class="absolute top-24 right-5 text-xs w-20 text-white ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    </div>
+
+    viene effettuato uno slice nell'array di elementi, da 0 ad un valore definito in una variabile
+
+    tramite next() questa variabile viene incrementata di volta in volta per quanti elementi voglio mostrare (4)
+
+    la condizione per il msg: se la variabile dinamica è maggiore o uguale alla lunghezza totale viene rimosso
+    il btn e viene mostrato un messaggio, questo perchè significa che gli elementi nell'array sono tutti caricati
+
 -->
 
