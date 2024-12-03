@@ -50,7 +50,7 @@
         @apply bg-white text-blue-950 rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
     } ;
     .btn-login {
-        @apply bg-sky-500 text-white rounded-xl w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
+        @apply bg-sky-500 text-white rounded-lg w-20 p-1 text-center font-semibold cursor-pointer active:bg-cyan-200
     } ;
     .animated-card {
         @apply  hover:animate-flip rounded object-fill delay-1000 drop-shadow-2xl h-40 w-40 sm:w-52 sm:h-52 sm:min-w-52 cursor-pointer
