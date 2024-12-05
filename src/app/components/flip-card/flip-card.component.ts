@@ -33,27 +33,28 @@ export class FlipCardComponent {
         },
         {
             step: "04",
-            name: "Assistance",
-            imageUrl: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww",
+            name: "Co-Work",
+            imageUrl: "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGNvd29ya3xlbnwwfHwwfHx8MA%3D%3D",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est illo impedit quaerat quia, repudiandae unde.",
         },
         {
             step: "05",
-            name: "Assistance",
-            imageUrl: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est illo impedit quaerat quia, repudiandae unde.",
+            name: "Support",
+            imageUrl: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHN1cHBvcnR8ZW58MHx8MHx8fDA%3D",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem fugit illo laboriosam nihil nulla porro, qui quisquam!",
         },
         {
             step: "06",
-            name: "Assistance",
-            imageUrl: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww",
+            name: "Upgrade",
+            imageUrl: "https://plus.unsplash.com/premium_photo-1695185954894-e9382c6f4da8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVhbGl6emF6aW9uZXxlbnwwfHwwfHx8MA%3D%3D",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est illo impedit quaerat quia, repudiandae unde.",
         },
         {
-            step: "03",
-            name: "Assistance",
-            imageUrl: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est illo impedit quaerat quia, repudiandae unde.",
+            step: "07",
+            name: "Merchandise",
+            imageUrl: "https://images.unsplash.com/photo-1633464130613-0a9154299ac2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fG1lcmNoYW5kaXNlfGVufDB8fDB8fHww",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem fugit illo laboriosam nihil nulla porro, qui quisquam!",
         },
     ]
 }
+
