@@ -43,5 +43,6 @@ export class GridComponent {
         this.imagePerRow = this._imagePerRow
     }
 
+
     //rifacendomi all'useState di react, poter aggiornare una variabile dinamicamente
 }

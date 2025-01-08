@@ -1,8 +1,9 @@
-<div class="flex justify-center items-center h-20 w-full">
-    <div class="flex justify-between items-center h-4/6 w-11/12 p-4 rounded-lg bg-blue-950 text-white">
-        <div class="flex items-center relative ">
-            <h2 class="font-sans text-lg font-semibold tracking-widest hidden sm:inline">Hynnova</h2>
-            <h3 class="text-tiny tracking-widest absolute top-6 right-8 hidden sm:inline">DIGITAL HEALT</h3>
+<div class="flex justify-center items-center h-20 w-full fixed z-10">
+<!--    fixed z-20-->
+    <div class="flex justify-between items-center h-4/6 w-11/12 p-4 rounded-lg gap-2 bg-blue-950 text-white">
+        <div class="flex items-center relative">
+            <h2 class="font-sans text-lg font-semibold tracking-widest hidden md:inline">Hynnova</h2>
+            <h3 class="text-tiny tracking-widest absolute top-6 right-8 hidden md:inline">DIGITAL HEALT</h3>
             <img src="./assets/segno-grafico-hynnova.svg" width="30" alt="logo" class="">
             <select name="menu" id=""  class="text-sky-500 sm:hidden cursor-pointer w-[5rem] p-2 text-sm bg-transparent focus:ring-blue-500 focus:border-blue-500 focus:border-none dark:bg-blue-950 dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="">Menu</option>
@@ -13,9 +14,11 @@
         </div>
         <div>
             <ul class="flex items-center gap-3">
-                <li class="btn-link hidden sm:inline">Home</li>
-                <li class="btn-link hidden sm:inline">Contatti</li>
-                <li class="btn-link hidden sm:inline">About</li>
+                <a (click)="scrollToid('home')" class="btn-link hidden sm:inline">Home</a>
+                <a (click)="scrollToid('flex-box')" class="btn-link hidden sm:inline">Flex-box</a>
+                <a (click)="scrollToid('grid-area')" class="btn-link hidden sm:inline">Grid-Area</a>
+                <a (click)="scrollToid('contacts')" class="btn-link hidden sm:inline">Contacts</a>
+                <a (click)="scrollToid('flip-card')" class="btn-link hidden sm:inline">Flip-Card</a>
             </ul>
         </div>
         <div class="flex items-center justify-between gap-3">
