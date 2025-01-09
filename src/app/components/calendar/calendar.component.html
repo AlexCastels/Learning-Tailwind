@@ -1,0 +1,30 @@
+<div class="w-full max-w-md mx-auto mt-10">
+    <!-- Header del calendario -->
+    <div class="flex justify-between items-center mb-4">
+        <button (click)="prevMonth()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">&lt;</button>
+        <h2 class="text-xl font-bold">{{ monthNames[currentDate.getMonth()] }} {{ currentDate.getFullYear() }}</h2>
+        <button (click)="nextMonth()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">&gt;</button>
+    </div>
+
+    <!-- Giorni della settimana -->
+    <div class="grid grid-cols-7 text-center text-gray-700 font-semibold">
+        <div *ngFor="let day of weekDays">{{ day }}</div>
+    </div>
+
+    <!-- Giorni del mese -->
+    <div class="grid grid-cols-7 text-center mt-2 gap-y-2">
+        <!-- Spazi vuoti per i giorni prima dell'inizio del mese -->
+        <div *ngFor="let empty of emptyDays"></div>
+
+        <!-- Giorni del mese -->
+        <div
+            *ngFor="let day of daysInMonth"
+            class="p-2 rounded hover:bg-blue-200 cursor-pointer"
+            (click)="selectDate(day)"
+            [ngClass]="" ]="{'bg-blue-500 text-white': isSelected(day)}"
+        >
+            {{ day }}
+        </div>
+    </div>
+</div>
+

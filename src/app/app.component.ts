@@ -6,11 +6,12 @@ import {HeroSectionComponent} from "./components/hero-section/hero-section.compo
 import {GridComponent} from "./components/grid/grid.component";
 import {ContactComponent} from "./components/contact/contact.component";
 import {FlipCardComponent} from "./components/flip-card/flip-card.component";
+import { DatepickerComponent } from "./components/datepicker/datepicker.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, ViewComponent, NavbarComponent, HeroSectionComponent, GridComponent, ContactComponent, FlipCardComponent],
+    imports: [ RouterOutlet , ViewComponent , NavbarComponent , HeroSectionComponent , GridComponent , ContactComponent , FlipCardComponent , DatepickerComponent ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
