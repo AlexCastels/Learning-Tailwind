@@ -17,7 +17,7 @@ export class CalendarComponent {
     selectedDate: Date | null = null; // Data selezionata
     daysInMonth: number[] = []; // Giorni del mese corrente
     emptyDays: number[] = []; // Spazi vuoti prima del primo giorno
-    weekDays: string[] = ['Do', 'Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa']; // Giorni della settimana
+    weekDays: string[] = ['Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa' , 'Do']; // Giorni della settimana
     monthNames: string[] = [
         'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
         'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre',
@@ -32,17 +32,21 @@ export class CalendarComponent {
         const year = this.currentDate.getFullYear();
         const month = this.currentDate.getMonth();
 
-        // Calcola il numero di giorni nel mese corrente
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-
         // Calcola il giorno della settimana del primo giorno del mese
         const firstDayOfMonth = new Date(year, month, 1).getDay();
+
+        // Modifica per spostare il primo giorno a lunedì
+        const adjustedFirstDay = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
+
+        // Aggiungi gli spazi vuoti
+        this.emptyDays = Array.from({ length: adjustedFirstDay });
+
+        // Calcola il numero di giorni nel mese corrente
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
 
         // Popola i giorni del mese
         this.daysInMonth = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
-        // Popola gli spazi vuoti prima del primo giorno
-        this.emptyDays = Array.from({ length: firstDayOfMonth });
     }
 
     // Passa al mese precedente

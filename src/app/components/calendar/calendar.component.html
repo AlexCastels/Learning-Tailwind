@@ -1,14 +1,14 @@
-<div class="w-full max-w-md mx-auto mt-10">
+<div class="w-full max-w-md mx-auto bg-gradient-to-r from-slate-600 to-slate-700 p-4 rounded-md shadow-lg text-white ">
     <!-- Header del calendario -->
     <div class="flex justify-between items-center mb-4">
-        <button (click)="prevMonth()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">&lt;</button>
+        <button (click)="prevMonth()" class="p-2 font-semibold bg-gray-500 rounded hover:bg-slate-400 transition-all duration-200">&lt;</button>
         <h2 class="text-xl font-bold">{{ monthNames[currentDate.getMonth()] }} {{ currentDate.getFullYear() }}</h2>
-        <button (click)="nextMonth()" class="p-2 bg-gray-200 rounded hover:bg-gray-300">&gt;</button>
+        <button (click)="nextMonth()" class="p-2 font-semibold bg-gray-500 rounded hover:bg-slate-400 transition-all duration-300">&gt;</button>
     </div>
 
     <!-- Giorni della settimana -->
-    <div class="grid grid-cols-7 text-center text-gray-700 font-semibold">
-        <div *ngFor="let day of weekDays">{{ day }}</div>
+    <div class="grid grid-cols-7 text-center text-gray-900 font-semibold" >
+        <div *ngFor="let day of weekDays" [ngClass]="{'text-red-500' : day === 'Do' || day === 'Sa'}">{{ day }}</div>
     </div>
 
     <!-- Giorni del mese -->
@@ -21,7 +21,7 @@
             *ngFor="let day of daysInMonth"
             class="p-2 rounded hover:bg-blue-200 cursor-pointer"
             (click)="selectDate(day)"
-            [ngClass]="" ]="{'bg-blue-500 text-white': isSelected(day)}"
+            [ngClass]="{'bg-slate-900 text-white': isSelected(day)}"
         >
             {{ day }}
         </div>
