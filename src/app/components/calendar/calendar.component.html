@@ -1,4 +1,4 @@
-<div class="w-full max-w-md mx-auto bg-gradient-to-r from-slate-600 to-slate-700 p-4 rounded-md shadow-lg text-white">
+<div class="w-full max-w-md min-w-32 mx-auto bg-gradient-to-r from-slate-600 to-slate-700 p-4 rounded-md shadow-lg text-white">
     <!-- Header del calendario -->
     <div class="flex justify-between items-center mb-4">
         <button (click)="prevMonth()" class="p-2 font-semibold bg-gray-500 rounded hover:bg-slate-400 transition-all duration-200">&lt;</button>
@@ -32,6 +32,6 @@
     </div>
 </div>
 <div>
-    <p class="text-white">{{ selectedDate?.toDateString() }}</p>
+    <p class="text-white text-center">Giorno selezionato: {{ selectedDate?.toDateString() }}</p>
 </div>
 

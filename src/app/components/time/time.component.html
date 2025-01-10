@@ -1,0 +1,34 @@
+<div class="flex flex-col items-center gap-3">
+    <div id="timePicker" class="flex items-baseline relative">
+        <div class="relative">
+            <button (click)="toggleDropdown()" class="flex items-baseline gap-3 p-4 w-28 rounded bg-gradient-to-l outline-none from-slate-700 to-slate-600 text-white transition-all duration-300 hover:outline-slate-600 focus:outline-slate-600">
+                {{ selectedHour }} : {{ selectedMinute }} <i class="fa-solid fa-clock"></i>
+            </button>
+            <ul
+                *ngIf="dropdownOpen"
+                class="absolute left-0 rounded-l top-14 z-10 bg-gradient-to-t from-slate-700 to-slate-600 max-h-52 overflow-auto no-scrollbar">
+                <li
+                    *ngFor="let hour of hours"
+                    (click)="selectHour(hour)"
+                    class="px-5 py-2 rounded-l hover:bg-gray-950 text-white cursor-pointer"
+                > {{ hour }}
+                </li>
+            </ul>
+            <ul
+                *ngIf="dropdownOpen"
+                class="absolute right-0 top-14 z-10 rounded-r bg-gradient-to-t from-slate-700 to-slate-600 max-h-52 overflow-auto no-scrollbar">
+                <li
+                    *ngFor="let minute of minutes"
+                    (click)="selectMinute(minute)"
+                    class="px-5 py-2 rounded-r hover:bg-gray-950 text-white cursor-pointer"
+                > {{ minute }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="text-white">
+        Orario selezionato:
+        <span class="font-medium">{{ formatTime(selectedHour, selectedMinute) }}</span>
+    </p>
+</div>
+
