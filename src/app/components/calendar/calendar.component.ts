@@ -17,7 +17,7 @@ export class CalendarComponent {
     selectedDate: Date | null = null; // Data selezionata
     daysInMonth: number[] = []; // Giorni del mese corrente
     emptyDays: number[] = []; // Spazi vuoti prima del primo giorno
-    weekDays: string[] = ['Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa' , 'Do']; // Giorni della settimana
+    weekDays: string[] = ['Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa' , 'Do'];
     monthNames: string[] = [
         'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
         'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre',
@@ -28,24 +28,24 @@ export class CalendarComponent {
     }
 
     // Aggiorna il calendario in base alla data corrente
-    updateCalendar() {
+    updateCalendar() : void {
         const year : number = this.currentDate.getFullYear();
-        const month = this.currentDate.getMonth();
+        const month : number = this.currentDate.getMonth();
 
         // Calcola il giorno della settimana del primo giorno del mese
-        const firstDayOfMonth = new Date(year, month, 1).getDay();
+        const firstDayOfMonth : number = new Date(year, month, 1).getDay();
 
         // Modifica per spostare il primo giorno a lunedì
-        const adjustedFirstDay = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
+        const adjustedFirstDay : number = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
 
         // Aggiungi gli spazi vuoti
         this.emptyDays = Array.from({ length: adjustedFirstDay });
 
         // Calcola il numero di giorni nel mese corrente
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const daysInMonth : number = new Date(year, month + 1, 0).getDate();
 
         // Popola i giorni del mese
-        this.daysInMonth = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+        this.daysInMonth = Array.from({ length: daysInMonth }, (_ : unknown, i : number ) : number => i + 1);
 
     }
 
@@ -56,13 +56,13 @@ export class CalendarComponent {
     }
 
     // Passa al mese successivo
-    nextMonth() {
+    nextMonth(): void {
         this.currentDate.setMonth(this.currentDate.getMonth() + 1);
         this.updateCalendar();
     }
 
     // Seleziona una data
-    selectDate(day: number) {
+    selectDate(day: number) : void {
         this.selectedDate = new Date(
             this.currentDate.getFullYear(),
             this.currentDate.getMonth(),
@@ -79,6 +79,14 @@ export class CalendarComponent {
             this.selectedDate.getMonth() === this.currentDate.getMonth() &&
             this.selectedDate.getDate() === day
         );
+    }
+
+    getToday() : void {
+        this.selectedDate = new Date() ;
+    }
+
+    deleteSelectedDate() : void {
+        this.selectedDate = null ;
     }
 
 }

@@ -1,4 +1,4 @@
-<div class="w-full max-w-md mx-auto bg-gradient-to-r from-slate-600 to-slate-700 p-4 rounded-md shadow-lg text-white ">
+<div class="w-full max-w-md mx-auto bg-gradient-to-r from-slate-600 to-slate-700 p-4 rounded-md shadow-lg text-white">
     <!-- Header del calendario -->
     <div class="flex justify-between items-center mb-4">
         <button (click)="prevMonth()" class="p-2 font-semibold bg-gray-500 rounded hover:bg-slate-400 transition-all duration-200">&lt;</button>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Giorni del mese -->
-    <div class="grid grid-cols-7 text-center mt-2 gap-y-2">
+    <div class="grid grid-cols-7 text-center mt-2 gap-y-2 pb-4">
         <!-- Spazi vuoti per i giorni prima dell'inizio del mese -->
         <div *ngFor="let empty of emptyDays"></div>
 
@@ -26,5 +26,12 @@
             {{ day }}
         </div>
     </div>
+    <div class="flex items-center justify-between">
+        <p class="active:text-gray-950" (click)="deleteSelectedDate()">Cancella</p>
+        <p class="active:text-gray-950" (click)="getToday()">Oggi</p>
+    </div>
+</div>
+<div>
+    <p class="text-white">{{ selectedDate?.toDateString() }}</p>
 </div>
 
