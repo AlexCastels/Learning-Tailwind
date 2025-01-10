@@ -29,7 +29,7 @@ export class CalendarComponent {
 
     // Aggiorna il calendario in base alla data corrente
     updateCalendar() {
-        const year = this.currentDate.getFullYear();
+        const year : number = this.currentDate.getFullYear();
         const month = this.currentDate.getMonth();
 
         // Calcola il giorno della settimana del primo giorno del mese

@@ -19,7 +19,7 @@
         <!-- Giorni del mese -->
         <div
             *ngFor="let day of daysInMonth"
-            class="p-2 rounded hover:bg-blue-200 cursor-pointer"
+            class="p-2 rounded hover:bg-slate-400 cursor-pointer"
             (click)="selectDate(day)"
             [ngClass]="{'bg-slate-900 text-white': isSelected(day)}"
         >
